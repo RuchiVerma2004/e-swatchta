@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">PraRoz</h2>
+            </div>
+
+            <!-- Add your navigation menu here (same as in index.html) -->
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">DESIGN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+
+        <div class="content">
+            
+            <div class="content">
+                <h1>GreenTech <br><span> Drop-off</span> </h1>
+                <br/>
+                <p class="par">Mankind's greatest environmental challenge is now being systematically tackled through timely and <br/> robust interventions that promise a safe future. Technology is a double-edged sword and what we are <br/> now seeing is its dark side in the form of global warming and air, water and soil pollution.</p>
+            </div>
+            <div class="form">
+                <h2 style="background-color: #19211eab;" >Create an Account</h2>
+                <input type="text" name="username" placeholder="Username">
+                <input type="email" name="email" placeholder="Enter Email Here">
+                <input type="password" name="password" placeholder="Enter Password Here">
+                <!-- Add additional registration fields here (e.g., confirm password, etc.) -->
+                
+                <button class="btnn" onclick="registerUser()">Register</button>
+                <p class="link">Already have an account? <a href="index.html">Login here</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        let usersData = [];
+
+// Function to register a new user
+function registerUser() {
+    // Get user input
+    const username = document.querySelector('input[name="username"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+
+    // Create a user object
+    const user = { username, email, password };
+
+    // Add the user to the array
+    usersData.push(user);
+
+    // Clear the form fields
+    document.querySelector('input[name="username"]').value = '';
+    document.querySelector('input[name="email"]').value = '';
+    document.querySelector('input[name="password"]').value = '';
+
+    // Optionally, you can display a success message
+    alert('Registration successful!');
+}
+
+    </script>
+    <footer>
+        <p>&copy; e-स्वच्छता</p>
+    </footer>
+</body>
+</html>

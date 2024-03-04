@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-overlay">
+        <img src="reuse.gif" alt="Loading..." />
+    </div>    
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo"> <span style="color: green;">e-</span> 
+                    <span style="color: white;">स्वच्छता</span>
+                </h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="design.html">DESIGN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <form action="https://www.google.com/search" target="_blank">
+            <div class="search">
+                <input class="srch" type="search" name="q" placeholder="Type here">
+                <button class="btn">Search</button>
+            </div>
+        </form>
+        </div> 
+        <div class="content">
+            <h1>GreenTech <br><span> Drop-off</span> </h1>
+            <br/>
+            <p class="par">Mankind's greatest environmental challenge is now being systematically tackled through timely and <br/> robust interventions that promise a safe future. Technology is a double-edged sword and what we are <br/> now seeing is its dark side in the form of global warming and air, water and soil pollution.</p>
+
+                <div class="form">
+                    <h2 style="background-color: #19211eab;" >Login Here</h2>
+                    <form action="index1.html" method="post"></form>
+                    <input type="email" name="email" id="email" placeholder="Enter Email Here" required>
+                    <input type="password" name="" id="password" placeholder="Enter Password Here" required>
+                    <button class="btnn" type="button" onclick="login()" >Login</button>
+
+                    <p class="link">Don't have an account<br>
+                    <a href="registration.html">Sign up </a> here</a></p>
+                    <p class="liw">Log in with</p>
+
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <footer >	
+        &copy; e-स्वच्छता	
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        // Array of user objects with email and password
+        const usersData = [
+            { email: "princeyadav31000@gmail.com", password: "password" },
+            { email: "rithikex1@gmail.com", password: "password" },
+            { email: "lakshaynandwani06@gmail.com", password: "password" },
+            { email: "lakshay.22cse@bmu.edu.in", password: "password" },
+            { email: "my123@gmail.com", password: "password" },
+            // Add more user objects as needed
+        ];
+        function login() {
+        // Get user input
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // Check if there's a user with the provided email and password
+        const matchingUser = usersData.find(user => user.email === email && user.password === password);
+
+        if (matchingUser) {
+            // Redirect to index1.html on successful login
+            window.location.href = "index1.html";
+        } else {
+            // Show an alert for failed login
+            alert('Login failed. Please check your credentials.');
+        }
+    }
+        window.addEventListener("load", function () {
+        const loadingOverlay = document.getElementById("loading-overlay");
+        loadingOverlay.style.display = "none"; // Hide the loading overlay when the page is fully loaded
+    });
+    </script>
+</body>
+</html>
